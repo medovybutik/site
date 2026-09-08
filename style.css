@@ -384,6 +384,45 @@ body.page-med::before {
 
 
 
+/* БЛОК ИНФОРМАЦИИ НА СТРАНИЦЕ КАРТИН */
+.info-container {
+    background-color: rgba(0, 0, 0, 0.65); /* Черная прозрачная плашка */
+    padding: 15px 20px;
+    border-radius: 14px;
+    max-width: 550px; /* Сделали чуть шире заголовка, чтобы текст красиво ложился */
+    width: 100%;
+    margin: 0 auto 30px auto; /* Центрируем и делаем отступ снизу до карточек товаров */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left; /* Текст внутри плашки выравниваем по левому краю для удобства чтения */
+}
+
+/* Настройка строчек текста внутри инфо-блока */
+.info-container p {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+    text-shadow: none; /* Убираем тени букв, так как фон темный */
+}
+
+.info-container p:last-child {
+    margin-bottom: 0; /* Убираем лишний отступ у последней строчки */
+}
+
+/* Мобильная адаптация для инфо-блока */
+@media (max-width: 600px) {
+    .info-container {
+        max-width: 90%; /* На телефонах плашка займет почти всю ширину экрана */
+        padding: 12px 15px;
+        margin-bottom: 20px;
+    }
+    .info-container p {
+        font-size: 0.9rem; /* Чуть уменьшаем шрифт на смартфонах */
+        margin-bottom: 8px;
+    }
+}
 
 
 

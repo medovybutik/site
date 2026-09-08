@@ -33,23 +33,49 @@
         <div class="products-grid">
             
 
-            <!-- КАРТОЧКА 1 -->
-            <div class="product-card">
-                 <img src="foto-kartin/k1.jpg" alt="Картина" class="product-img">
-                <h3>«Вечірній храм»</h3>
-                <p class="product-desc">мальовничий пейзаж із давньою церквою у променях вечірнього сонця.</p>
-                <div class="product-price">2 600 ₴</div>
-            </div>
+           <!-- КАРТОЧКА 1 -->
+<div class="product-card">
+    <!-- Навесили событие клика: при нажатии на картинку откроется окно с id "open-k1" -->
+    <img src="foto-kartin/k1.jpg" alt="Картина" class="product-img" onclick="document.getElementById('open-k1').classList.add('active')">
+    <h3>«Вечірній храм»</h3>
+    <p class="product-desc">мальовничий пейзаж із давньою церквою у променях вечірнього сонця.</p>
+    <div class="product-price">2 600 ₴</div>
+</div>
+
+<!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+<div id="open-k1" class="lightbox">
+    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k1').classList.remove('active')"></a>
+    <div class="lightbox-content">
+        <img src="foto-kartin/k1.jpg" alt="Крупный просмотр">
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k1').classList.remove('active')">✕</a>
+    </div>
+</div>
+
+
 
 
 
             <!-- КАРТОЧКА 2 -->
             <div class="product-card">
-                <img src="foto-kartin/k2.jpg" alt="Картина" class="product-img">
+                <img src="foto-kartin/k2.jpg" alt="Картина" class="product-img" onclick="document.getElementById('open-k2').classList.add('active')">
                 <h3>«Осіння обитель»</h3>
                 <p class="product-desc">світлий храм в оточенні золотої осінньої меланхолії та листя.</p>
                 <div class="product-price">2 600 ₴</div>
             </div>
+
+
+            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+<div id="open-k2" class="lightbox">
+    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k2').classList.remove('active')"></a>
+    <div class="lightbox-content">
+        <img src="foto-kartin/k2.jpg" alt="Крупный просмотр">
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k2').classList.remove('active')">✕</a>
+    </div>
+</div>
+
+
 
 
             <!-- КАРТОЧКА 3 -->

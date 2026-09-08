@@ -201,6 +201,8 @@ body.page-main::after {
     object-fit: cover; /* Обрезает фото под один размер, чтобы карточки не плясают по высоте */
     border-radius: 10px;
     background-color: #eee; /* Серый фон, пока картинка не загрузилась */
+
+    cursor: pointer; 
 }
 
 .product-card h3 {
@@ -423,6 +425,86 @@ body.page-med::before {
         margin-bottom: 8px;
     }
 }
+
+
+
+
+
+
+
+/* --- СТИЛИ ДЛЯ УВЕЛИЧЕНИЯ КАРТИНКИ (LIGHTBOX) --- */
+
+/* Темный фон на весь экран (скрыт по умолчанию) */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Черный полупрозрачный фон */
+    display: none; /* Прячем */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Поверх абсолютно всего на сайте */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Магия CSS: когда ссылка ведет на ID этой карточки, мы её показываем */
+.lightbox.active {
+    display: flex; 
+}
+
+/* Зона для закрытия кликом по фону */
+.lightbox-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+}
+
+/* Контейнер для большой картинки */
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Сама большая картинка внутри окна */
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* Кнопка-крестик в углу */
+.lightbox-btn-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.lightbox-btn-close:hover {
+    color: #f7ca54; /* Медовый цвет при наведении */
+}
+
+
+
+
+
+
+
 
 
 

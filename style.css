@@ -170,29 +170,7 @@ body.page-main::after {
 
 /* --- СТИЛИ ДЛЯ СТРАНИЦ ТОВАРОВ --- */
 
-/* Кнопка "Назад" */
-.navigation-box {
-    max-width: 1200px; /* 👈 Сделали рамку широкой (такой же, как у сетки с картинами) */
-    width: 100%;       /* Растягиваем на всю доступную ширину */
-    margin: 10px auto; /* Центрируем саму широкую рамку */
-    padding: 0 20px;   /* Добавляем небольшой отступ от самого края экрана, чтобы кнопка не прилипала к монитору */
-    text-align: left;  /* Прижимает кнопку к самому левому краю этой широкой рамки */
-    box-sizing: border-box;
-}
 
-.btn-back {
-    display: inline-block;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: background 0.2s;
-}
-.btn-back:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
 
 /* Сетка для карточек товаров */
 .products-grid {
@@ -331,16 +309,6 @@ body.page-med::before {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* БЛОК КОНТАКТІВ НА ГОЛОВНІЙ СТОРІНЦІ */
 .contacts-container {
     background-color: rgba(0, 0, 0, 0.65); /* Така ж прозора чорна плашка */
@@ -400,6 +368,18 @@ body.page-med::before {
 }
 
 
+/* НАСТРОЙКА РАЗМЕРА ИМЕННО ДЛЯ ЗАГОЛОВКА КАРТИН */
+
+/* 1. Меням длину и высоту чёрной прозрачной рамки */
+.page-catalog .title-container {
+    max-width: 550px;      /* ⬅️ Изменяйте цифру, чтобы сделать рамку длиннее или короче именно в картинах */
+    padding: 14px 22px;    /* ⬅️ Первая цифра (14px) — это высота от букв до верхнего/нижнего края плашки */
+}
+
+/* 2. Меняем размер букв внутри этой рамки */
+.page-catalog .title-container h1 {
+    font-size: 1.6rem;     /* ⬅️ Изменяйте цифру (например, 1.4rem или 1.9rem), чтобы настроить размер шрифта */
+}
 
 
 

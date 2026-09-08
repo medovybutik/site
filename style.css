@@ -332,6 +332,81 @@ body.page-med::before {
 
 
 
+
+
+
+
+
+
+
+
+
+/* БЛОК КОНТАКТІВ НА ГОЛОВНІЙ СТОРІНЦІ */
+.contacts-container {
+    background-color: rgba(0, 0, 0, 0.65); /* Така ж прозора чорна плашка */
+    padding: 20px;
+    border-radius: 14px;
+    margin-top: 35px; /* Відступ зверху від кнопок */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Така ж довжина, як у заголовків */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Заголовок "Наші контакти" */
+.contacts-container h2 {
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    font-size: 1.5rem;
+}
+
+/* Кожен рядок контакту */
+.contact-item {
+    color: #f1f1f1;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0; /* Прибираємо відступ у останнього рядка */
+}
+
+/* Стилі для клікабельних посилань (телефон, тг, інста) */
+.contact-item a {
+    color: #f7ca54; /* Красивий медовий колір для посилань, щоб виділялися */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+    margin-left: 5px;
+}
+
+.contact-item a:hover {
+    color: #ffffff; /* При наведенні мишкою посилання ставатиме білим */
+}
+
+/* Адаптація блоку контактів для телефонів */
+@media (max-width: 600px) {
+    .contacts-container {
+        margin-top: 25px;
+        padding: 15px;
+    }
+    .contacts-container h2 {
+        font-size: 1.3rem;
+    }
+    .contact-item {
+        font-size: 0.95rem;
+    }
+}
+
+
+
+
+
+
+
+
+
 /* ==========================================================
    📱 КУСОЧЕК КОДА ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ
    ========================================================== */

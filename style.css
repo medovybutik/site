@@ -1,0 +1,331 @@
+/* Общие настройки для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #f7ca54; 
+}
+
+/* МАГИЯ РАЗМЫТИЯ ПО БОКАМ: этот блок работает НА ВСЕХ страницах */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('fon sayta2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(25px) brightness(0.8); 
+    z-index: -2; 
+    transform: scale(1.1); 
+}
+
+/* ИСПРАВЛЕНО: Добавляем слово body.page-main перед ::after.
+   Теперь чёткая картинка по центру включится ТОЛЬКО на главной странице! */
+body.page-main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 100%; 
+    height: 100%;
+    background-image: url('fon sayta2.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain; 
+    z-index: -1; 
+}
+
+
+
+/* Контейнер для кнопок-категорий */
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Отступы между кнопками */
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Красивый стиль для кнопок */
+.btn-category {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background-color: #d9a05b; /* Приятный медово-деревянный цвет */
+    color: white;
+    text-decoration: none; /* Убираем подчеркивание текста */
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: background 0.2s; /* Плавное изменение цвета при наведении */
+}
+
+/* Эффект при наведении мышки на кнопку */
+.btn-category:hover {
+    background-color: #bf8543;
+}
+
+/* Общий контейнер для выравнивания */
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* ОБЩИЙ СТИЛЬ ДЛЯ ПЛАШЕК И КНОПОК: Увеличили длину до 500px */
+/* ЭТОТ БЛОК ТЕПЕРЬ ОТВЕЧАЕТ ТОЛЬКО ЗА ЧЕРНЫЕ ПЛАШКИ С ТЕКСТОМ */
+.title-container, .subtitle-container {
+    max-width: 450px; /* Оставляем плашкам с текстом их текущий размер */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* А ЭТОТ НОВЫЙ БЛОК УПРАВЛЯЕТ ИСКЛЮЧИТЕЛЬНО ДЛИНОЙ КНОПОК! */
+.categories-container {
+    max-width: 200px; /* 👈 МЕНЯЙТЕ ЭТУ ЦИФРУ! Сделайте её больше или меньше, поменяется длина ТОЛЬКО у кнопок */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* ПРЯМОКУТНИК 1: Для названия */
+.title-container {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 15px 25px;
+    border-radius: 14px;
+    margin-bottom: 12px; /* Небольшой отступ до второго прямоугольника */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.title-container h1 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+/* ПРЯМОКУТНИК 2: Для подписи */
+.subtitle-container {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 12px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px; /* Отступ до начала кнопок */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle-container p {
+    color: #f1f1f1;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Контейнер для кнопок */
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Кнопки тоже автоматически станут длиннее (500px) */
+.btn-category {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    background-color: rgba(217, 160, 91, 0.95);
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btn-category:hover {
+    background-color: rgba(191, 133, 67, 1);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+/* --- СТИЛИ ДЛЯ СТРАНИЦ ТОВАРОВ --- */
+
+/* Кнопка "Назад" */
+.navigation-box {
+    max-width: 1200px; /* 👈 Сделали рамку широкой (такой же, как у сетки с картинами) */
+    width: 100%;       /* Растягиваем на всю доступную ширину */
+    margin: 10px auto; /* Центрируем саму широкую рамку */
+    padding: 0 20px;   /* Добавляем небольшой отступ от самого края экрана, чтобы кнопка не прилипала к монитору */
+    text-align: left;  /* Прижимает кнопку к самому левому краю этой широкой рамки */
+    box-sizing: border-box;
+}
+
+.btn-back {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+.btn-back:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Сетка для карточек товаров */
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; /* Если карточки не влезут в один ряд, они красиво перенесутся ниже */
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Сама карточка товара */
+.product-card {
+    background-color: rgba(253, 247, 237, 0.95); /* Белая подложка для читаемости текста */
+    border-radius: 16px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Фотография внутри карточки */
+.product-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover; /* Обрезает фото под один размер, чтобы карточки не плясают по высоте */
+    border-radius: 10px;
+    background-color: #eee; /* Серый фон, пока картинка не загрузилась */
+}
+
+.product-card h3 {
+    color: #33251c;
+    margin: 15px 0 8px 0;
+    font-size: 1.3rem;
+}
+
+.product-desc {
+    color: #66554c;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    height: 60px; /* Фиксированная высота для описания, чтобы кнопки были на одном уровне */
+    overflow: hidden;
+    margin: 0 0 15px 0;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #d9a05b; /* Наш фирменный медовый цвет для цены */
+    margin-bottom: 15px;
+}
+
+/* Кнопка заказа в карточке */
+.btn-order {
+    display: block;
+    background-color: #24a1de; /* Цвет Telegram */
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(36, 161, 222, 0.3);
+    transition: background 0.2s;
+}
+.btn-order:hover {
+    background-color: #1d82b5;
+}
+
+/* --- НАСТРОЙКА ПОЛНОСТЬЮ РАЗМЫТОГО ФОНА ДЛЯ КАТАЛОГА --- */
+
+/* Делаем фон сплошным для страницы каталога */
+body.page-catalog {
+    background: #1a0f00; /* Темная подложка на случай долгой загрузки */
+    margin: 0;
+    padding: 0;
+}
+
+/* Создаем отдельный слой для размытия, который точно сработает везде */
+body.page-catalog::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('fon sayta2.jpg'); /* 🌟 ПОСТАВЬТЕ СЮДА ТОЧНОЕ ИМЯ ВАШЕЙ КАРТИНКИ (bg.jpg или другое) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(20px) brightness(0.7); /* 100% размытие на всю страницу! */
+    z-index: -1;
+    transform: scale(1.1); /* Убирает белые края по бокам экрана */
+}
+
+/* Контейнер для контента каталога */
+.main-content-catalog {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- СВЕТЛЫЙ ФОН ДЛЯ ВСЕХ КАТАЛОГОВ СРАЗУ --- */
+body.page-catalog::before,
+body.page-vulyky::before,
+body.page-svichky::before,
+body.page-doshchechky::before,
+body.page-med::before {
+    /* Ставим тот же уровень яркости, который вам понравился в картинах */
+    filter: blur(25px) brightness(1.0); 
+}
+
+/* НАСТРОЙКА ЗАГОЛОВКОВ ДЛЯ ВСЕХ СТРАНИЦ ТОВАРОВ (Картины, Вулики, Свечи и т.д.) */
+
+/* 1. Управляем размером чёрной рамки вокруг надписи на всех страницах */
+.page-catalog .title-container,
+.page-vulyky .title-container,
+.page-svichky .title-container,
+.page-doshchechky .title-container,
+.page-med .title-container {
+    max-width: 300px;       /* ⬅️ Изменяйте эту цифру (было 450px), чтобы сделать чёрную рамку ещё короче */
+    padding: 10px 18px;     /* ⬅️ Первая цифра (10px) делает плашку тоньше по высоте */
+}
+
+/* 2. Управляем размером самих букв внутри этой рамки */
+.page-catalog .title-container h1,
+.page-vulyky .title-container h1,
+.page-svichky .title-container h1,
+.page-doshchechky .title-container h1,
+.page-med .title-container h1 {
+    font-size: 1.5rem;      /* ⬅️ Изменяйте эту цифру (было 2rem), чтобы сделать буквы больше или меньше */
+}
+

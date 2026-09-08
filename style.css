@@ -501,6 +501,41 @@ body.page-med::before {
 
 
 
+/* --- ИНТЕРАКТИВНЫЙ ЗУМ ДЛЯ КОМПЬЮТЕРОВ --- */
+
+/* Контейнер-рамка, удерживающий картинку */
+.zoom-container {
+    overflow: hidden; /* Прячем части картинки, которые выходят за рамки при приближении */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 85vh;
+    position: relative;
+}
+
+/* Сама увеличиваемая картинка */
+.zoomable-img {
+    max-width: 100%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transition: transform 0.05s ease-out; /* Плавное увеличение */
+    cursor: zoom-in; /* Иконка лупы при наведении */
+    transform-origin: center center;
+    position: relative;
+    user-select: none; /* Запрещаем выделять картинку как текст при перетаскивании */
+    -webkit-user-drag: none;
+}
+
+
+/* Блокировка прокрутки сайта на заднем плане */
+body.no-scroll {
+    overflow: hidden; /* Замораживает страницу, убирая полосу прокрутки */
+}
+
+
 
 
 

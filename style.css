@@ -542,7 +542,7 @@ body.no-scroll {
     box-sizing: border-box;
     text-align: left;
     
-    max-width: 420px; /* ⬅️ МЕНЯЙ ТУТ ДЛИНУ ТОЛЬКО ДЛЯ СВЕЧЕЙ */
+    max-width: 550px; /* ⬅️ МЕНЯЙ ТУТ ДЛИНУ ТОЛЬКО ДЛЯ СВЕЧЕЙ */
 }
 
 /* 🍯 4. Настройка инфо-блока для МЁДА */

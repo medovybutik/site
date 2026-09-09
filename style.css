@@ -384,45 +384,7 @@ body.page-med::before {
 
 
 
-/* БЛОК ИНФОРМАЦИИ НА СТРАНИЦЕ КАРТИН */
-.info-container {
-    background-color: rgba(0, 0, 0, 0.65); /* Черная прозрачная плашка */
-    padding: 15px 20px;
-    border-radius: 14px;
-    max-width: 550px; /* Сделали чуть шире заголовка, чтобы текст красиво ложился */
-    width: 100%;
-    margin: 0 auto 30px auto; /* Центрируем и делаем отступ снизу до карточек товаров */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    text-align: left; /* Текст внутри плашки выравниваем по левому краю для удобства чтения */
-}
 
-/* Настройка строчек текста внутри инфо-блока */
-.info-container p {
-    color: #ffffff;
-    font-size: 1.05rem;
-    font-weight: normal;
-    line-height: 1.5;
-    margin: 0 0 10px 0;
-    text-shadow: none; /* Убираем тени букв, так как фон темный */
-}
-
-.info-container p:last-child {
-    margin-bottom: 0; /* Убираем лишний отступ у последней строчки */
-}
-
-/* Мобильная адаптация для инфо-блока */
-@media (max-width: 600px) {
-    .info-container {
-        max-width: 90%; /* На телефонах плашка займет почти всю ширину экрана */
-        padding: 12px 15px;
-        margin-bottom: 20px;
-    }
-    .info-container p {
-        font-size: 0.9rem; /* Чуть уменьшаем шрифт на смартфонах */
-        margin-bottom: 8px;
-    }
-}
 
 
 
@@ -537,6 +499,95 @@ body.no-scroll {
 
 
 
+/* --- ОТДЕЛЬНЫЕ НАСТРОЙКИ ДЛЯ КАЖДОЙ КАТЕГОРИИ (Компьютерная версия) --- */
+
+/* 🖼️ 1. Настройка инфо-блока для КАРТИН */
+.info-kartiny {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 15px 20px;
+    border-radius: 14px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left;
+    
+    max-width: 550px; /* ⬅️ МЕНЯЙ ТУТ ДЛИНУ ТОЛЬКО ДЛЯ КАРТИН */
+}
+
+/* 🪵 2. Настройка инфо-блока для ДОЩЕЧЕК */
+.info-doshchechky {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 15px 20px;
+    border-radius: 14px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left;
+    
+    max-width: 315px; /* ⬅️ МЕНЯЙ ТУТ ДЛИНУ ТОЛЬКО ДЛЯ ДОЩЕЧЕК */
+}
+
+/* 🕯️ 3. Настройка инфо-блока для СВЕЧЕЙ */
+.info-svichky {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 15px 20px;
+    border-radius: 14px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left;
+    
+    max-width: 420px; /* ⬅️ МЕНЯЙ ТУТ ДЛИНУ ТОЛЬКО ДЛЯ СВЕЧЕЙ */
+}
+
+/* 🍯 4. Настройка инфо-блока для МЁДА */
+.info-med {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 15px 20px;
+    border-radius: 14px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left;
+    
+    max-width: 450px; /* ⬅️ МЕНЯЙ ТУТ ДЛИНУ ТОЛЬКО ДЛЯ МЁДА */
+}
+
+/* 🐝 5. Настройка инфо-блока для УЛЬЕВ */
+.info-vulyky {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 15px 20px;
+    border-radius: 14px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: left;
+    
+    max-width: 500px; /* ⬅️ МЕНЯЙ ТУТ ДЛИНУ ТОЛЬКО ДЛЯ УЛЬЕВ */
+}
+
+/* Универсальная настройка текста для ВСЕХ инфо-блоков сайта */
+.info-kartiny p, .info-doshchechky p, .info-svichky p, .info-med p, .info-vulyky p {
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+}
+.info-kartiny p:last-child, .info-doshchechky p:last-child, .info-svichky p:last-child, .info-med p:last-child, .info-vulyky p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
 
 
 
@@ -639,6 +690,21 @@ body.no-scroll {
         justify-content: center;
         overflow: hidden;    
     }
+
+
+
+           /* 📱 Мобильная адаптация для вообще всех инфо-блоков сайта */
+    .info-kartiny, .info-doshchechky, .info-svichky, .info-med, .info-vulyky {
+        max-width: 90% !important; 
+        padding: 12px 15px;
+        margin-bottom: 20px;
+    }
+    .info-kartiny p, .info-doshchechky p, .info-svichky p, .info-med p, .info-vulyky p {
+        font-size: 0.9rem; 
+        margin-bottom: 8px;
+    }
+
+
 
 
 

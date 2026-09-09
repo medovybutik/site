@@ -693,15 +693,26 @@ body.no-scroll {
 
 
 
-           /* 📱 Мобильная адаптация для вообще всех инфо-блоков сайта */
+             /* 📱 ИДЕАЛЬНАЯ мобильная адаптация для вообще всех инфо-блоков сайта */
     .info-kartiny, .info-doshchechky, .info-svichky, .info-med, .info-vulyky {
-        max-width: 90% !important; 
-        padding: 12px 15px;
-        margin-bottom: 20px;
+        width: calc(100% - 20px) !important; /* Умный расчет: плашка займет всю ширину за вычетом аккуратных полей по бокам */
+        max-width: 400px !important;         /* Ограничиваем максимальную ширину на смартфонах, чтобы плашка не выглядела огромной коровьей шкурой */
+        padding: 14px 16px !important;       /* Внутренние отступы: чуть больше сверху/снизу и аккуратно по бокам */
+        margin: 0 auto 20px auto !important; /* Центрируем строго по центру экрана телефона и даем отступ вниз до товаров */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+        border-radius: 12px !important;      /* Слегка уменьшаем скругление углов для мобильных экранов */
     }
+
+    /* Настройка текста внутри инфо-блоков на телефоне */
     .info-kartiny p, .info-doshchechky p, .info-svichky p, .info-med p, .info-vulyky p {
-        font-size: 0.9rem; 
-        margin-bottom: 8px;
+        font-size: 0.9rem !important;        /* Комфортный размер шрифта для чтения с экрана телефона */
+        line-height: 1.4 !important;         /* Расстояние между строчками, чтобы текст не слипался */
+        margin-bottom: 8px !important; 
+        text-align: center !important;       /* 🌟 СЕКРЕТНЫЙ ПРИЕМ: На телефонах короткий текст (в одну-две строчки) смотрится в сто раз красивее, если он выровнен по центру, а не по левому краю! */
+    }
+
+    .info-kartiny p:last-child, .info-doshchechky p:last-child, .info-svichky p:last-child, .info-med p:last-child, .info-vulyky p:last-child {
+        margin-bottom: 0 !important;
     }
 
 

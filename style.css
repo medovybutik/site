@@ -235,6 +235,8 @@ body::before {
     padding: 4px 8px;
     border-radius: 6px;
     display: inline-block; /* Плашка будет по размеру текста */
+
+     line-height: 1.2; 
 }
 
 
@@ -663,7 +665,9 @@ body.no-scroll {
         background-color: rgba(217, 160, 91, 0.15); 
         border-radius: 6px;
         display: inline-block; 
-        word-break: normal;     
+        word-break: normal; 
+
+        line-height: 1.2;    
     }
 
 

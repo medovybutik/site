@@ -620,7 +620,7 @@ body.no-scroll {
 
         /* 🌟 НАСТРОЙКА НАЗВАНИЙ НА ТЕЛЕФОНЕ — ТЕПЕРЬ ОНИ НА ОДНОМ УРОВНЕ */
     .product-card h3 {
-        font-size: 0.9rem;   /* Аккуратный размер шрифта */
+        font-size: 0.90rem;   /* Аккуратный размер шрифта */
         margin-top: 8px;     
         margin-bottom: 4px;  
         line-height: 1.2;    

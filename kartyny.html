@@ -105,13 +105,23 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+           <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №3 -->
 <div id="open-k3" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k3').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k3').classList.remove('active'); resetZoom('zoom-img-3')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k3.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k3').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k3.jpg" alt="Крупный просмотр" id="zoom-img-3" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k3').classList.remove('active'); resetZoom('zoom-img-3')">✕</a>
     </div>
 </div>
 
@@ -125,13 +135,23 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+             <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №4 -->
 <div id="open-k4" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k4').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k4').classList.remove('active'); resetZoom('zoom-img-4')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k4.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k4').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k4.jpg" alt="Крупный просмотр" id="zoom-img-4" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k4').classList.remove('active'); resetZoom('zoom-img-4')">✕</a>
     </div>
 </div>
 
@@ -147,13 +167,23 @@
             </div>
 
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+              <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №5 -->
 <div id="open-k5" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k5').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k5').classList.remove('active'); resetZoom('zoom-img-5')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k5.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k5').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k5.jpg" alt="Крупный просмотр" id="zoom-img-5" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k5').classList.remove('active'); resetZoom('zoom-img-5')">✕</a>
     </div>
 </div>
 
@@ -168,15 +198,26 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+             <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №6 -->
 <div id="open-k6" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k6').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k6').classList.remove('active'); resetZoom('zoom-img-6')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k6.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k6').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k6.jpg" alt="Крупный просмотр" id="zoom-img-6" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k6').classList.remove('active'); resetZoom('zoom-img-6')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 7 -->
@@ -188,15 +229,26 @@
             </div>
 
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+           <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №7 -->
 <div id="open-k7" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k7').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k7').classList.remove('active'); resetZoom('zoom-img-7')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k7.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k7').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k7.jpg" alt="Крупный просмотр" id="zoom-img-7" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k7').classList.remove('active'); resetZoom('zoom-img-7')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 8 -->
@@ -207,15 +259,26 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+             <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №8 -->
 <div id="open-k8" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k8').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k8').classList.remove('active'); resetZoom('zoom-img-8')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k8.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k8').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k8.jpg" alt="Крупный просмотр" id="zoom-img-8" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k8').classList.remove('active'); resetZoom('zoom-img-8')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 9 -->
@@ -227,15 +290,26 @@
             </div>
 
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №9 -->
 <div id="open-k9" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k9').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k9').classList.remove('active'); resetZoom('zoom-img-9')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k9.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k9').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k9.jpg" alt="Крупный просмотр" id="zoom-img-9" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k9').classList.remove('active'); resetZoom('zoom-img-9')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 10 -->
@@ -246,15 +320,26 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №10 -->
 <div id="open-k10" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k10').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k10').classList.remove('active'); resetZoom('zoom-img-10')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k10.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k10').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k10.jpg" alt="Крупный просмотр" id="zoom-img-10" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k10').classList.remove('active'); resetZoom('zoom-img-10')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 11 -->
@@ -265,15 +350,26 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №11 -->
 <div id="open-k11" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k11').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k11').classList.remove('active'); resetZoom('zoom-img-11')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k11.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k11').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k11.jpg" alt="Крупный просмотр" id="zoom-img-11" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k11').classList.remove('active'); resetZoom('zoom-img-11')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 12 -->
@@ -284,15 +380,26 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+             <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №12 -->
 <div id="open-k12" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k12').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k12').classList.remove('active'); resetZoom('zoom-img-12')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k12.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k12').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k12.jpg" alt="Крупный просмотр" id="zoom-img-12" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k12').classList.remove('active'); resetZoom('zoom-img-12')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 13 -->
@@ -303,13 +410,23 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+               <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №13 -->
 <div id="open-k13" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k13').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k13').classList.remove('active'); resetZoom('zoom-img-13')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k13.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k13').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k13.jpg" alt="Крупный просмотр" id="zoom-img-13" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k13').classList.remove('active'); resetZoom('zoom-img-13')">✕</a>
     </div>
 </div>
 
@@ -323,15 +440,26 @@
             </div>
 
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+             <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №14 -->
 <div id="open-k14" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k14').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k14').classList.remove('active'); resetZoom('zoom-img-14')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k14.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k14').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k14.jpg" alt="Крупный просмотр" id="zoom-img-14" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k14').classList.remove('active'); resetZoom('zoom-img-14')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 15 -->
@@ -342,15 +470,26 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+              <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №15 -->
 <div id="open-k15" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k15').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k15').classList.remove('active'); resetZoom('zoom-img-15')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k15.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k15').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k15.jpg" alt="Крупный просмотр" id="zoom-img-15" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k15').classList.remove('active'); resetZoom('zoom-img-15')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 16 -->
@@ -361,15 +500,26 @@
                 <div class="product-price">2 000 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+                <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №16 -->
 <div id="open-k16" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k16').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k16').classList.remove('active'); resetZoom('zoom-img-16')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k16.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k16').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k16.jpg" alt="Крупный просмотр" id="zoom-img-16" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k16').classList.remove('active'); resetZoom('zoom-img-16')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 17 -->
@@ -380,15 +530,26 @@
                 <div class="product-price">2 000 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+                <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №17 -->
 <div id="open-k17" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k17').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k17').classList.remove('active'); resetZoom('zoom-img-17')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k17.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k17').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k17.jpg" alt="Крупный просмотр" id="zoom-img-17" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k17').classList.remove('active'); resetZoom('zoom-img-17')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 18 -->
@@ -399,15 +560,27 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+                <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №18 -->
 <div id="open-k18" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k18').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k18').classList.remove('active'); resetZoom('zoom-img-18')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k18.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k18').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k18.jpg" alt="Крупный просмотр" id="zoom-img-18" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k18').classList.remove('active'); resetZoom('zoom-img-18')">✕</a>
     </div>
 </div>
+
+
 
             <!-- КАРТОЧКА 19 -->
             <div class="product-card">
@@ -417,13 +590,23 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+                <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №19 -->
 <div id="open-k19" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k19').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k19').classList.remove('active'); resetZoom('zoom-img-19')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k19.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k19').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k19.jpg" alt="Крупный просмотр" id="zoom-img-19" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k19').classList.remove('active'); resetZoom('zoom-img-19')">✕</a>
     </div>
 </div>
 
@@ -436,13 +619,23 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+                <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №20 -->
 <div id="open-k20" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k20').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k20').classList.remove('active'); resetZoom('zoom-img-20')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k20.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k20').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k20.jpg" alt="Крупный просмотр" id="zoom-img-20" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k20').classList.remove('active'); resetZoom('zoom-img-20')">✕</a>
     </div>
 </div>
 
@@ -456,15 +649,26 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+                <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №21 -->
 <div id="open-k21" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k21').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k21').classList.remove('active'); resetZoom('zoom-img-21')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k21.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k21').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k21.jpg" alt="Крупный просмотр" id="zoom-img-21" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k21').classList.remove('active'); resetZoom('zoom-img-21')">✕</a>
     </div>
 </div>
+
 
 
             <!-- КАРТОЧКА 22 -->
@@ -475,13 +679,23 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+                <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №22 -->
 <div id="open-k22" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k22').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k22').classList.remove('active'); resetZoom('zoom-img-22')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k22.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k22').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k22.jpg" alt="Крупный просмотр" id="zoom-img-22" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k22').classList.remove('active'); resetZoom('zoom-img-22')">✕</a>
     </div>
 </div>
 
@@ -494,13 +708,23 @@
                 <div class="product-price">2 600 ₴</div>
             </div>
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+                <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №23 -->
 <div id="open-k23" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k23').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k23').classList.remove('active'); resetZoom('zoom-img-23')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k23.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k23').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k23.jpg" alt="Крупный просмотр" id="zoom-img-23" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k23').classList.remove('active'); resetZoom('zoom-img-23')">✕</a>
     </div>
 </div>
 
@@ -514,13 +738,23 @@
             </div>
 
 
-            <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ (Остается на месте) -->
+                <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ №24 -->
 <div id="open-k24" class="lightbox">
-    <!-- При клике на фон или крестик — убираем класс 'active' и окно закрывается -->
-    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k24').classList.remove('active')"></a>
+    <!-- При клике на фон — убираем класс 'active' и сбрасываем зум для zoom-img-2 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-k24').classList.remove('active'); resetZoom('zoom-img-24')"></a>
     <div class="lightbox-content">
-        <img src="foto-kartin/k24.jpg" alt="Крупный просмотр">
-        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k24').classList.remove('active')">✕</a>
+        <!-- Оболочка для зума -->
+        <div class="zoom-container">
+            <!-- Задали уникальный id="zoom-img-2" и события мышки -->
+            <img src="foto-kartin/k24.jpg" alt="Крупный просмотр" id="zoom-img-24" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик закрывает окно и сбрасывает приближение для zoom-img-2 -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-k24').classList.remove('active'); resetZoom('zoom-img-24')">✕</a>
     </div>
 </div>
 

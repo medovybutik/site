@@ -554,14 +554,14 @@ body.no-scroll {
         padding: 0 10px;
     }
 
-    /* 3. КАРТОЧКА ТОВАРA (Сделали длиннее и убрали жесткие ограничения) */
+    /* 3. КАРТОЧКА ТОВАРА — настраиваем правильное распределение элементов */
     .product-card {
         width: calc(50% - 6px); 
         padding: 10px; 
         border-radius: 12px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Выталкивает цену вниз, чтобы карточки были одной высоты */
+        justify-content: flex-start; /* Выравниваем всё по верхней структуре */
         box-sizing: border-box;
     }
 
@@ -579,16 +579,16 @@ body.no-scroll {
     }
 
 
-    /* 5. ТЕКСТ БОЛЬШЕ НЕ ОБРЕЗАЕТСЯ */
-    .product-card h3 {
-        font-size: 0.95rem; 
-        margin: 10px 0 6px 0;
+    /* 5. ОПИСАНИЕ — фиксируем высоту на смартфонах, чтобы размеры встали в один ряд */
+    .product-desc {
+        font-size: 0.75rem; 
+        color: #66554c;
+        line-height: 1.3;
         
-        /* 🌟 ИСПРАВЛЕНО: Убираем скрытие текста. Теперь длинное название переносится на новую строчку! */
-        white-space: normal; 
-        overflow: visible;
-        text-overflow: clip;
-        line-height: 1.2;
+        /* 🌟 ВОТ ЭТИ СТРОЧКИ ВЫРАВНЯЮТ ВСЁ НА ОДИН УРОВЕНЬ: */
+        height: 52px;            /* Фиксированная высота для мобильного описания (примерно 3 строчки) */
+        overflow: hidden;        /* Прячет лишнее, если текста вдруг станет слишком много */
+        margin-bottom: 2px;      /* Подтягиваем размер поближе */
     }
 
     .product-desc {

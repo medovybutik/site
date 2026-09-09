@@ -21,7 +21,8 @@ body::before {
     background-image: url('fon sayta2.jpg');
     background-size: cover;
     background-position: center;
-    filter: blur(25px) brightness(0.8); 
+    filter: blur(4px) brightness(0.8); 
+
     z-index: -2; 
     transform: scale(1.1); 
 }

@@ -33,6 +33,9 @@
     <div class="deck-img-block">
         <!-- Клик по фото открывает лайтбокс open-vul1 -->
         <img src="foto-vulyky/vul1.jpg" alt="Колода для душі" class="deck-img" onclick="document.getElementById('open-vul1').classList.add('active')">
+        
+        <!-- 👇 ПЛАШКА-ПОДСКАЗКА ДЛЯ СМАРТФОНОВ 👇 -->
+        <div class="zoom-hint" onclick="document.getElementById('open-vul1').classList.add('active')">🔍 Крупний план</div>
     </div>
     
     <div class="deck-info-block">
@@ -46,10 +49,6 @@
                 <li>🚪 Третя дверка для зручної виїмки меду</li>
                 <li>🪵 Повна комплектація з надійною дерев'яною підставкою</li>
                 <li>📏 Висота виробу: 2 м 30 см (оглядова)</li>
-                <li>🪟 2 оглядових віконця зі склом</li>
-                <li>🚪 Третя дверка для зручної виїмки меду</li>
-                <li>🪵 Повна комплектація з надійною дерев'яною підставкою</li>
-
             </ul>
         </div>
         
@@ -59,12 +58,10 @@
 
 <!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ -->
 <div id="open-vul1" class="lightbox">
-    <!-- Клик по фону закрывает окно и сбрасывает зум у картинки zoom-img-vul1 -->
     <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-vul1').classList.remove('active'); resetZoom('zoom-img-vul1')"></a>
     
     <div class="lightbox-content">
         <div class="zoom-container">
-            <!-- Интерактивная картинка vul1 с зумом -->
             <img src="foto-vulyky/vul1.jpg" alt="Крупный просмотр" id="zoom-img-vul1" class="zoomable-img"
                  onwheel="zoomImage(event, this)" 
                  onmousedown="startDrag(event, this)" 

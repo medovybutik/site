@@ -588,6 +588,54 @@ body.no-scroll {
 
 
 
+/* --- СТИЛИ ДЛЯ ИКОНКИ-ПОДСКАЗКИ НА СМАРТФОНАХ --- */
+
+/* Делаем блок с фото главным ориентиром для позиционирования */
+.deck-img-block {
+    position: relative;
+}
+
+/* Настраиваем внешний вид плашки на фото */
+.zoom-hint {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.65); /* Прозрачный черный цвет, как ваши заголовки */
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 2; /* Чтобы плашка точно была поверх картинки */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Микро-эффект нажатия на плашку пальцем */
+.zoom-hint:active {
+    background-color: rgba(0, 0, 0, 0.85);
+    transform: scale(0.95);
+}
+
+/* 🖥️ СКРЫВАЕМ ПЛАШКУ НА КОМПЬЮТЕРАХ (на экранах шире 768px) */
+@media (min-width: 769px) {
+    .zoom-hint {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
 
 /* --- СПЕЦИАЛЬНЫЕ КАРТОЧКИ ДЛЯ КОЛОД --- */
 

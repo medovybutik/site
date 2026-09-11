@@ -687,14 +687,15 @@ body.no-scroll {
 .deck-card h3 {
     color: #33251c;
     margin: 0 0 15px 0;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    text-align: center;
 }
 
 .deck-desc {
     color: #66554c;
-    font-size: 1.05rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
 /* Красивый список характеристик */
@@ -715,6 +716,7 @@ body.no-scroll {
     font-weight: bold;
     color: #d9a05b; /* Ваш медовый цвет */
     margin-top: auto; /* Толкает цену в самый низ */
+    text-align: center;
 }
 
 /* ==========================================================

@@ -589,6 +589,141 @@ body.no-scroll {
 
 
 
+/* --- СПЕЦИАЛЬНЫЕ КАРТОЧКИ ДЛЯ КОЛОД --- */
+
+/* Контейнер идет сверху вниз, а не сеткой */
+.deck-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Отступ между колодами */
+    max-width: 900px; /* Ограничиваем ширину, чтобы текст не размазывался по экрану */
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Сама карточка (Компьютерная версия: фото слева, текст справа) */
+.deck-card {
+    display: flex;
+    background-color: rgba(253, 247, 237, 0.95); /* Ваша фирменная светлая подложка */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    box-sizing: border-box;
+    text-align: left; /* Текст выравниваем по левому краю для удобства чтения */
+}
+
+/* Блок для фотографии */
+.deck-img-block {
+    flex: 0 0 350px; /* Фиксированная ширина фото на ПК */
+    background-color: #fcfaf7;
+}
+
+.deck-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Красиво заполняет блок */
+    display: block;
+    cursor: pointer;
+}
+
+/* Блок с текстом */
+.deck-info-block {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Прижимает цену к низу */
+    flex-grow: 1;
+}
+
+.deck-card h3 {
+    color: #33251c;
+    margin: 0 0 15px 0;
+    font-size: 1.6rem;
+}
+
+.deck-desc {
+    color: #66554c;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Красивый список характеристик */
+.deck-features {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.deck-features li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+/* Цена колоды */
+.deck-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d9a05b; /* Ваш медовый цвет */
+    margin-top: auto; /* Толкает цену в самый низ */
+}
+
+/* ==========================================================
+   📱 АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ (Перестраиваем в один столбец)
+   ========================================================== */
+@media (max-width: 768px) {
+    .deck-container {
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .deck-card {
+        flex-direction: column; /* На телефоне: фото сверху, текст снизу */
+        text-align: center; /* Центрируем заголовки и цену */
+    }
+
+    .deck-img-block {
+        flex: none;
+        width: 100%;
+        max-height: 350px; /* Чтобы высокое фото не занимало весь экран телефона */
+        overflow: hidden;
+    }
+
+    .deck-img {
+        object-fit: contain; /* Чтобы колоду было видно полностью без обрезки */
+        background-color: #fcfaf7;
+    }
+
+    .deck-info-block {
+        padding: 15px;
+    }
+
+    .deck-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .deck-desc {
+        font-size: 0.95rem;
+        text-align: left; /* Сам длинный текст внутри карточки оставляем читаемым */
+        margin-bottom: 15px;
+    }
+
+    .deck-features li {
+        margin-bottom: 6px;
+    }
+
+    .deck-price {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
 
 
 

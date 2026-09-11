@@ -9,35 +9,173 @@
 <!-- Клас page-vulyky автоматично увімкне той самий світлий розмитий фон -->
 <body class="page-vulyky">
 
-    <div class="main-content-catalog">
-        
     
 
-        <!-- Заголовок сторінки у красивій рамці -->
+
+
+<!-- Заголовок сторінки -->
         <div class="title-container" style="margin: 20px auto;">
-            <h1>Наші Вулики🐝</h1>
+            <h1>Наші Свічки🕯️</h1>
+        </div>
+
+
+         <!-- 👇 НОВЫЙ БЛОК С ИНФОРМАЦИЕЙ 👇 -->
+        <div class="info-svichky">
+            <p> Свічки зі 100% бджолиного воску</p>
+            <p> Під час горіння віск виділяє фітонциди, які знезаражують повітря та покращують атмосферу в домі.</p>
+            <p> Дарують теплий і солодкий аромат натурального меду та лугових трав.</p>
         </div>
 
 
 
-        <!-- СЕТКА ДЛЯ ВУЛИКІВ -->
-        <div class="products-grid">
-
-
-            
-           
-
-            
-
-
-             
-
-
-
-
-        </div>
-
+          <!-- КАРТОЧКА 1 -->
+<div class="deck-card">
+    <div class="deck-img-block">
+        <!-- Клик по фото открывает лайтбокс open-vul1 -->
+        <img src="foto-vulyky/vul1.jpg" alt="Колода для душі" class="deck-img" onclick="document.getElementById('open-vul1').classList.add('active')">
     </div>
+    
+    <div class="deck-info-block">
+        <h3>Колода для душі</h3>
+        
+        <div class="deck-desc">
+            <p>Доброго дня! Спеціальна колода для душі, в якій немає класичних рамок. У верхній частині встановлені планочки, від яких бджілки самостійно та природно тягнуть стільники.</p>
+            
+            <ul class="deck-features">
+                <li>🪟 2 оглядових віконця зі склом</li>
+                <li>🚪 Третя дверка для зручної виїмки меду</li>
+                <li>🪵 Повна комплектація з надійною дерев'яною підставкою</li>
+                <li>📏 Висота виробу: 2 м 30 см (оглядова)</li>
+                <li>🪟 2 оглядових віконця зі склом</li>
+                <li>🚪 Третя дверка для зручної виїмки меду</li>
+                <li>🪵 Повна комплектація з надійною дерев'яною підставкою</li>
+
+            </ul>
+        </div>
+        
+        <div class="deck-price">38 000 ₴</div>
+    </div>
+</div>
+
+<!-- ОКНО УВЕЛИЧЕННОЙ КАРТИНКИ -->
+<div id="open-vul1" class="lightbox">
+    <!-- Клик по фону закрывает окно и сбрасывает зум у картинки zoom-img-vul1 -->
+    <a href="javascript:void(0)" class="lightbox-close" onclick="document.getElementById('open-vul1').classList.remove('active'); resetZoom('zoom-img-vul1')"></a>
+    
+    <div class="lightbox-content">
+        <div class="zoom-container">
+            <!-- Интерактивная картинка vul1 с зумом -->
+            <img src="foto-vulyky/vul1.jpg" alt="Крупный просмотр" id="zoom-img-vul1" class="zoomable-img"
+                 onwheel="zoomImage(event, this)" 
+                 onmousedown="startDrag(event, this)" 
+                 onmousemove="dragImage(event, this)" 
+                 onmouseup="endDrag(this)" 
+                 onmouseleave="endDrag(this)">
+        </div>
+        <!-- Кнопка-крестик -->
+        <a href="javascript:void(0)" class="lightbox-btn-close" onclick="document.getElementById('open-vul1').classList.remove('active'); resetZoom('zoom-img-vul1')">✕</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- 🧙‍♂️ ОБЩИЙ УМНЫЙ СКРИПТ: ЗУМ, ПЕРЕТАСКИВАНИЕ И АВТО-ЗАМОРОЗКА ФОНА -->
+    <script>
+        let isDragging = false;
+        let startX, startY;
+        let translateX = 0, translateY = 0;
+        let scale = 1;
+
+        // --- УМНАЯ АВТО-ЗАМОРОЗКА ЗАДНЕГО ФОНА БЕЗ ПОВТОРЕНИЯ КОДА ---
+        // Этот робот-наблюдатель каждую секунду смотрит, открыто ли какое-то окно.
+        // Если открыто — он сам включает .no-scroll для body, если закрыто — выключает.
+        const observer = new MutationObserver(() => {
+            const anyActiveLightbox = document.querySelector('.lightbox.active');
+            if (anyActiveLightbox) {
+                document.body.classList.add('no-scroll');
+            } else {
+                document.body.classList.remove('no-scroll');
+            }
+        });
+
+        // Включаем наблюдателя для всех лайтбоксов на странице
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll('.lightbox').forEach(lightbox => {
+                observer.observe(lightbox, { attributes: true, attributeFilter: ['class'] });
+            });
+        });
+
+
+        // --- КОД ДЛЯ ИНТЕРАКТИВНОГО ЗУМА МЫШКОЙ ---
+        function zoomImage(e, img) {
+            e.preventDefault(); // Запрещаем стандартную прокрутку сайта
+            const zoomFactor = 0.1;
+            if (e.deltaY < 0) {
+                scale += zoomFactor; // Крутим вверх — увеличиваем
+            } else {
+                scale -= zoomFactor; // Крутим вниз — уменьшаем
+            }
+
+            scale = Math.max(1, Math.min(4, scale));
+
+            if (scale === 1) {
+                translateX = 0;
+                translateY = 0;
+                img.style.cursor = 'zoom-in';
+            } else {
+                img.style.cursor = 'grab';
+            }
+
+            img.style.transform = `scale(${scale}) translate(${translateX}px, ${translateY}px)`;
+        }
+
+        function startDrag(e, img) {
+            if (scale === 1) return;
+            isDragging = true;
+            img.style.cursor = 'grabbing';
+            startX = e.clientX - translateX;
+            startY = e.clientY - translateY;
+        }
+
+        function dragImage(e, img) {
+            if (!isDragging) return;
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            img.style.transform = `scale(${scale}) translate(${translateX / scale}px, ${translateY / scale}px)`;
+        }
+
+        function endDrag(img) {
+            if (!isDragging) return;
+            isDragging = false;
+            img.style.cursor = 'grab';
+        }
+
+        function resetZoom(imgId) {
+            const img = document.getElementById(imgId);
+            if (img) {
+                scale = 1;
+                translateX = 0;
+                translateY = 0;
+                img.style.transform = 'scale(1) translate(0px, 0px)';
+                img.style.cursor = 'zoom-in';
+            }
+        }
+    </script>
+
+
+
+
+
 
 </body>
 </html>
